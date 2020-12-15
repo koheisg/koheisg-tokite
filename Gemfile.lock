@@ -1,18 +1,3 @@
-PATH
-  remote: /Users/sugikouhei/.ghq/github.com/koheisg/tokite
-  specs:
-    tokite (0.4.1)
-      haml
-      haml-rails
-      octokit
-      omniauth-github
-      parslet
-      pg
-      rails (~> 5.1.1)
-      ridgepole
-      sass-rails (~> 5.0)
-      slack-notifier
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -221,6 +206,17 @@ GEM
     thor (1.0.1)
     thread_safe (0.3.6)
     tilt (2.0.10)
+    tokite (0.4.1)
+      haml
+      haml-rails
+      octokit
+      omniauth-github
+      parslet
+      pg
+      rails (~> 5.1.1)
+      ridgepole
+      sass-rails (~> 5.0)
+      slack-notifier
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
@@ -255,7 +251,7 @@ DEPENDENCIES
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
-  tokite!
+  tokite
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
