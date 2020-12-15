@@ -83,6 +83,4 @@ test:
 #
 production:
   <<: *default
-  database: koheisg-tokite_production
-  username: koheisg-tokite
-  password: <%= ENV['KOHEISG-TOKITE_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
