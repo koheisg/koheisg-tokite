@@ -1,3 +1,18 @@
+PATH
+  remote: /Users/sugikouhei/.ghq/github.com/koheisg/tokite
+  specs:
+    tokite (0.4.1)
+      haml
+      haml-rails
+      octokit
+      omniauth-github
+      parslet
+      pg
+      rails (~> 5.1.1)
+      ridgepole
+      sass-rails (~> 5.0)
+      slack-notifier
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -42,8 +57,6 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     arel (8.0.0)
     bindex (0.8.1)
-    bootsnap (1.5.1)
-      msgpack (~> 1.0)
     builder (3.2.4)
     byebug (11.1.3)
     capybara (3.34.0)
@@ -55,11 +68,19 @@ GEM
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
     childprocess (3.0.0)
+    coffee-rails (4.2.2)
+      coffee-script (>= 2.2.0)
+      railties (>= 4.0.0)
+    coffee-script (2.4.1)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.12.2)
     concurrent-ruby (1.1.7)
     crass (1.0.6)
     diffy (3.4.0)
     erubi (1.10.0)
     erubis (2.7.0)
+    execjs (2.7.0)
     faraday (1.1.0)
       multipart-post (>= 1.2, < 3)
       ruby2_keywords
@@ -86,9 +107,10 @@ GEM
     jbuilder (2.10.1)
       activesupport (>= 5.0.0)
     jwt (2.2.2)
-    listen (3.3.3)
-      rb-fsevent (~> 0.10, >= 0.10.3)
-      rb-inotify (~> 0.9, >= 0.9.10)
+    listen (3.1.5)
+      rb-fsevent (~> 0.9, >= 0.9.4)
+      rb-inotify (~> 0.9, >= 0.9.7)
+      ruby_dep (~> 1.2)
     loofah (2.8.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -98,7 +120,6 @@ GEM
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.14.2)
-    msgpack (1.3.3)
     multi_json (1.15.0)
     multi_xml (0.6.0)
     multipart-post (2.1.1)
@@ -126,11 +147,8 @@ GEM
     parslet (2.0.0)
     pg (1.2.3)
     public_suffix (4.0.6)
-    puma (4.3.7)
-      nio4r (~> 2.0)
+    puma (3.12.6)
     rack (2.2.3)
-    rack-proxy (0.6.5)
-      rack
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (5.1.7)
@@ -165,6 +183,7 @@ GEM
       activerecord (>= 5.0.1, < 6.1)
       diffy
     ruby2_keywords (0.0.2)
+    ruby_dep (1.5.0)
     ruby_parser (3.15.0)
       sexp_processor (~> 4.9)
     rubyzip (2.3.0)
@@ -198,40 +217,22 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite3 (1.4.2)
     temple (0.8.2)
     thor (1.0.1)
     thread_safe (0.3.6)
     tilt (2.0.10)
-    tokite (0.4.1)
-      haml
-      haml-rails
-      octokit
-      omniauth-github
-      parslet
-      pg
-      rails (~> 5.1.1)
-      ridgepole
-      sass-rails (~> 5.0)
-      slack-notifier
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
     tzinfo (1.2.8)
       thread_safe (~> 0.1)
+    uglifier (4.2.0)
+      execjs (>= 0.3.0, < 3)
     web-console (3.7.0)
       actionview (>= 5.0)
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
-    webdrivers (4.4.1)
-      nokogiri (~> 1.6)
-      rubyzip (>= 1.3.0)
-      selenium-webdriver (>= 3.0, < 4.0)
-    webpacker (4.3.0)
-      activesupport (>= 4.2)
-      rack-proxy (>= 0.6.1)
-      railties (>= 4.2)
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -242,27 +243,23 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
-  jbuilder (~> 2.7)
-  listen (~> 3.2)
-  puma (~> 4.1)
-  rails
+  coffee-rails (~> 4.2)
+  jbuilder (~> 2.5)
+  listen (>= 3.0.5, < 3.2)
+  pg (>= 0.18, < 2.0)
+  puma (~> 3.7)
+  rails (~> 5.1.7)
   sass-rails (~> 5.0)
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
-  sqlite3 (~> 1.4)
-  tokite
+  tokite!
   turbolinks (~> 5)
   tzinfo-data
+  uglifier (>= 1.3.0)
   web-console (>= 3.3.0)
-  webdrivers
-  webpacker (~> 4.0)
-
-RUBY VERSION
-   ruby 2.7.1p83
 
 BUNDLED WITH
    2.1.4
