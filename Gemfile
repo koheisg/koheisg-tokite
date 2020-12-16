@@ -32,7 +32,11 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'tokite'
+if ENV['TOKITE_PATH']
+  gem 'tokite', path: ENV['TOKITE_PATH']
+else
+  gem 'tokite', github: 'koheisg/tokite'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
